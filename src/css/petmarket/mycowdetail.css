@@ -1,0 +1,31 @@
+.top_pic{
+	height: 4rem;
+	background: lightblue;
+}
+.purchase_btn_div{
+	padding: 0.2rem;
+	font-size: 0.3rem;
+}
+.cow_attribute ul li{
+	font-size: 0.3rem;
+	border: 1px solid #bfbfbf;
+	border-radius: 0.1rem;
+	margin-right: 0.3rem;
+	margin-bottom: 0.3rem;
+	float: left;
+	padding: 0.2rem;
+}
+.label{
+	margin: 0.3rem;
+}
+.cow_name{
+	margin: 0.4rem 0.5rem 0.3rem 0.2rem;
+	font-size: 0.3rem;
+}
+.tag{
+    font-size: 0.3rem;
+    background: lightblue;
+    display: inline-block;
+    border-radius: 0.1rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}

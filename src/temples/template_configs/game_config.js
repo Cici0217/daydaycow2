@@ -9,6 +9,7 @@ const mybullpenConfig = {
         homePageNav:true,//首页导航配置
         homePageIndex:0,//首页导航索引
         styles:[
+            "../css/game/mybullpen.css",
         ],
         scripts:[
             "../scripts/swiper.min.js",

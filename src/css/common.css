@@ -56,6 +56,9 @@ img{
 ul li{
     list-style: none;
 }
+section.list ul li{
+    list-style: none;
+} 
 .clearfix{
     clear: both;
 }
@@ -76,7 +79,7 @@ ul li{
 .float_lft,.pull_left{
     float: left;
 }
-.float_rht{
+.float_rht,.pull_right{
     float: right;
 }
 .font{

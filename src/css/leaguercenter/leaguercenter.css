@@ -1,0 +1,18 @@
+.head_portrait{
+	float: left;
+	width: 3rem;
+	border: 1px solid #333;
+	font-size: 0.2rem;
+	height: 3rem;
+}
+.userinfo{
+	float: left;
+	width: 6rem;
+    overflow: hidden;
+    font-size: 0.2rem
+}
+
+section.list ul{
+	border: 1px solid #333;
+    margin:0.3rem 0.3rem 0 0.3rem;
+} 

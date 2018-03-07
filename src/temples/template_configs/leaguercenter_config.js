@@ -9,8 +9,10 @@ const leaguercenterConfig = {
         homePageNav:true,//首页导航配置
         homePageIndex:0,//首页导航索引
         styles:[
+            "../css/leaguercenter/leaguercenter.css",
         ],
         scripts:[
+            "../scripts/leaguercenter/leaguercenter.js",
         ]
     },
     "recharge":{
@@ -20,8 +22,10 @@ const leaguercenterConfig = {
         homePageNav:true,//首页导航配置
         homePageIndex:0,//首页导航索引
         styles:[
+            "../css/leaguercenter/recharge.css",
         ],
         scripts:[
+            "../scripts/leaguercenter/recharge.js",
         ]
     },
     "billing-record":{

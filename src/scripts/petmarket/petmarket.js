@@ -21,8 +21,8 @@ var petmarket = {
 	                    var arrLen = data.length;
 	                    if(arrLen > 0){
 	                        for(var i=0; i<arrLen; i++){
-	                            result +=   '<li onclick="petmarket.goDetail()">'
-	                                            +'天天牛'+ i
+	                            result +=   '<li>'
+	                                            +'<a href="my-cow-detail.html">天天牛</a>'+ i
 	                                        +'</li>';
 	                        }
 	                    // 如果没有数据
@@ -48,9 +48,6 @@ var petmarket = {
 	            });
 	        }
 	    });
-	},
-	goDetail: function(){
-		window.location.href = "my-cow-detail.html"
 	}
 }
 
