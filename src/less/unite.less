@@ -1,0 +1,190 @@
+*{
+  font-family: "Helvetica Neue",Helvetica,"Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+      width: 468px;
+      margin: 0 auto;
+  }
+  html {
+    font-size: 250%!important; /* 17.44÷16=109% */
+    background: @C_gray-d;
+  }
+  .tabbar,
+  .gamePlay-wrap,
+  .plat-wrap,
+  .dialog-pay-wrap .dialog-content{
+    width: 468px!important;
+    margin: 0 auto;
+  }
+}
+input,textarea{
+  -webkit-appearance: none; 
+}
+/*===================
+        常量
+ ====================*/
+/*宽度常量*/
+@fullWidth:100%;
+@fullHeight:100%;
+/*高度常量*/
+
+/*颜色常量*/
+@white:#ffffff;   //白色
+@A_blue:#5394ff;    //小面积使用，用于特别需要强调和突出的文字、按钮、icon（eg:开始、提交、领取按钮，相关文字信息等）
+@A_blue-b:#6fa6ff;   //同上（eg：标题栏，图标色，文字色，相关文字信息等）
+@A_blue-c:#77aafd;
+@A_purple:#7b289f;  //按钮：特别需要强调的按钮（eg:加微信、提前开服按钮等）
+@A_orange:#e67f20;  //同上（eg：加群、即将开服按钮等）
+@B_black:#313131;   //用于：普通段落信息 文本标题 引导词（eg:游戏名称、详情页标题栏目等）
+@B_black_bar:#071635;   //用于：顶部状态条
+@B_black_input:#8b8b8b;
+@B_black_bg:#001036;   //用于：游戏详情背景色
+@B_black-b:#777676; //用于：辅助、次要文字信息等（eg:游戏详情文本、副标题文字等）
+@B_black-c:#a5a5a5; //用于：文本输入框文字内容（eg:注册登录框文本、手机输入框文本）
+@B_black_d:#071c4e;
+@C_gray:#dfdfdf;    //用于：内容区域、较短分割线
+@C_gray-b:#dcdcdc;  //用于：分割线、标签描边
+@C_gray-c:#eeeeee;  //用于：下拉页、搜索框内容区域底色
+@C_gray-d:#efefef;  //用于：模块之间区域底色
+@C_gray-e:#7d7d7d;  
+@active:#d9d9d9;    //点击是的背景色（eg:游戏首页导航）
+@red:#ec2525;
+/*字体常量*/
+@A_fs:0.52rem;        //用在：导航栏大标文字、大功能按钮（eg:导航、弹出框按钮、退出、登录等大按钮）
+@A_fs-b:0.46rem;      //用在：一些较为重要的标题（eg:游戏名称、详情页大标、模块栏目名称）
+@A_fs-c:0.56rem;      //用在：弹出框标题
+@A_fs-d:0.6rem;
+@B_fs:0.44rem;      //用在：
+@B_fs-b:0.40rem;      //用在：
+@B_fs-c:0.34rem;      //用在：
+@B_fs-d:0.36rem;      //用在：
+@C_fs:0.32rem;      //用在：
+
+
+/*===================
+        函数
+ ====================*/
+/*圆角函数*/
+.borderRadus(@radius){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.borderRadus_4value(@leftTopRadus;@topRightRadus;@rightBottomRadus;@bottomLeftRadus;){
+  -webkit-border-radius: @leftTopRadus @topRightRadus @rightBottomRadus @bottomLeftRadus;
+  -moz-border-radius: @leftTopRadus @topRightRadus @rightBottomRadus @bottomLeftRadus;
+  border-radius: @leftTopRadus @topRightRadus @rightBottomRadus @bottomLeftRadus;
+}
+/*border函数*/
+.border(@borderStyle;@borderColor){
+  border:@borderStyle 0.1rem @borderColor;
+}
+.borderBottom(@borderStyle;@borderColor){
+  border-bottom:@borderStyle 0.1rem @borderColor;
+}
+/*background-size函数*/
+.backgroundSize(@hPosition;@vPosition;@background-size){
+  background-position: @hPosition @vPosition;
+  background-repeat: no-repeat;
+  -webkit-background-size: @background-size;
+  -moz-background-size: @background-size;
+  -o-background-size: @background-size;
+  background-size: @background-size;
+}
+/*渐变*/
+.gradientGenerator(@startRgbColor;@endRgbColor;@startHexColor;@endHexColor;){
+  background: @startRgbColor;
+  background: -moz-linear-gradient(left, @startRgbColor 0%, @endRgbColor 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, startRgbColor), color-stop(100%, @endRgbColor));
+  background: -webkit-linear-gradient(left, @startRgbColor 0%, @endRgbColor 100%);
+  background: -o-linear-gradient(left, @startRgbColor 0%, @endRgbColor 100%);
+  background: -ms-linear-gradient(left, @startRgbColor 0%, @endRgbColor 100%);
+  background: linear-gradient(to right, @startRgbColor 0%, @endRgbColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@startHexColor, endColorstr=@endHexColor, GradientType=1 );
+}
+/*导航菜单背景色*/
+.navHoverBg(){
+  background: rgba(37,96,114,1);
+  background: -moz-linear-gradient(top, rgba(37,96,114,1) 0%, rgba(12,58,71,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(37,96,114,1)), color-stop(100%, rgba(12,58,71,1)));
+  background: -webkit-linear-gradient(top, rgba(37,96,114,1) 0%, rgba(12,58,71,1) 100%);
+  background: -o-linear-gradient(top, rgba(37,96,114,1) 0%, rgba(12,58,71,1) 100%);
+  background: -ms-linear-gradient(top, rgba(37,96,114,1) 0%, rgba(12,58,71,1) 100%);
+  background: linear-gradient(to bottom, rgba(37,96,114,1) 0%, rgba(12,58,71,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#256072', endColorstr='#0c3a47', GradientType=0 );
+}
+/*盒子投影函数*/
+.boxShadow(@hShadow;@vShadow;@blur;@spread;@colorCode){
+  -webkit-box-shadow: @hShadow @vShadow @blur @spread @colorCode;
+  -moz-box-shadow: @hShadow @vShadow @blur @spread @colorCode;
+  box-shadow: @hShadow @vShadow @blur @spread @colorCode;
+}
+.boxShadow_b(@boxShadowd){
+  -webkit-box-shadow: @boxShadowd;
+  -moz-box-shadow: @boxShadowd;
+  box-shadow: @boxShadowd;
+}
+/*text-overflow文本溢出显示省略号'...'*/
+.textOverflow(@text-overflow){
+  white-space: nowrap;
+  -ms-text-overflow: @text-overflow;
+  -o-text-overflow: @text-overflow;
+  text-overflow: @text-overflow;
+}
+.textLineClamp(@line-clamp){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line-clamp;
+  line-clamp: @line-clamp;
+  overflow: hidden;
+}
+/*display:flex布局*/
+.displayFlex(@derection){
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: @derection;
+  -moz-flex-direction: @derection;
+  -ms-flex-direction: @derection;
+  -o-flex-direction: @derection;
+  flex-direction: @derection;
+  align-items:center;
+}
+
+/*按钮渐变色*/
+.linearButton(){
+    background: rgba(85,15,106,1);
+    background: -moz-linear-gradient(top, rgba(85,15,106,1) 0%, rgba(66,12,82,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(85,15,106,1)), color-stop(100%, rgba(66,12,82,1)));
+    background: -webkit-linear-gradient(top, rgba(85,15,106,1) 0%, rgba(66,12,82,1) 100%);
+    background: -o-linear-gradient(top, rgba(85,15,106,1) 0%, rgba(66,12,82,1) 100%);
+    background: -ms-linear-gradient(top, rgba(85,15,106,1) 0%, rgba(66,12,82,1) 100%);
+    background: linear-gradient(to bottom, rgba(85,15,106,1) 0%, rgba(66,12,82,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#550f6a', endColorstr='#420c52', GradientType=0 );
+}
+.linearButton_fan(){
+    background: rgba(66,12,82,1);
+    background: -moz-linear-gradient(top, rgba(66,12,82,1) 0%, rgba(85,15,106,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(66,12,82,1)), color-stop(100%, rgba(85,15,106,1)));
+    background: -webkit-linear-gradient(top, rgba(66,12,82,1) 0%, rgba(85,15,106,1) 100%);
+    background: -o-linear-gradient(top, rgba(66,12,82,1) 0%, rgba(85,15,106,1) 100%);
+    background: -ms-linear-gradient(top, rgba(66,12,82,1) 0%, rgba(85,15,106,1) 100%);
+    background: linear-gradient(to bottom, rgba(66,12,82,1) 0%, rgba(85,15,106,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#420c52', endColorstr='#550f6a', GradientType=0 );
+}
+/*动画*/
+.elementAnimate(){
+  transition: all 0.4s ease;
+}
+
+
+

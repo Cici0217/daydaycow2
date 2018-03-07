@@ -1,0 +1,34 @@
+<% if(local.hasFootNav) { %>
+    <%
+        var footNav = [{
+            name:"我的牛栏",
+            icon:"game.png",
+            active:"game_active.png",
+            href:'my-bullpen.html',
+        },{
+            name:"宠物集市",
+            icon:"gift.png",
+            active:"gift_active.png",
+            href:'pet-market.html',
+        },{
+            name:"个人中心",
+            icon:"personal.png",
+            active:"personal_active.png",
+            href:'leaguer-center.html',
+        }];
+    %>
+    <div class="tabbar">
+        <% footNav.forEach(function(item,index){ %>
+            <a href="<%=item.href%>" class="tabbar__item">
+                <span style="display: inline-block;position: relative;">
+                    <% if(local.footNavIndex == index){ %>
+                        <img src="../images/tabbar/<%=item.active%>" alt="" class="tabbar__icon">
+                    <% }else{ %>
+                        <img src="../images/tabbar/<%=item.icon%>" alt="" class="tabbar__icon">
+                    <% } %>
+                </span>
+                <p class="tabbar__label"><%=item.name%></p>
+            </a>
+        <% }) %>
+    </div>
+<% } %>

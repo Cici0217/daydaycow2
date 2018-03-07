@@ -1,0 +1,44 @@
+<%- include('../../document_temp/document-head') %>
+<div>
+	<div>
+		天天牛<br>
+		<p>欢迎加入<br>首个基于天天链的区块链宠物养成游戏</p>
+		<!-- Swiper -->
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide">Slide 1</div>
+		      <div class="swiper-slide">Slide 2</div>
+		      <div class="swiper-slide">Slide 3</div>
+		      <div class="swiper-slide">Slide 4</div>
+		    </div>
+		    <!-- Add Pagination -->
+		    <div class="swiper-pagination"></div>
+		    <!-- Add Arrows -->
+		    <div class="swiper-button-next"></div>
+		    <div class="swiper-button-prev"></div>
+  		</div>
+  		<input type="button" name="login_btn" value="登录" id="login_btn"/>
+  		<input type="button" name="register_btn" value="注册" id="register_btn"/>
+		<input type="button" name="enter_game" value="进入游戏" id="enter_game_btn"/>
+	</div>
+</div>
+
+<%- include('../../page_temp/app-foot-nav') %>
+<%- include('../../document_temp/document-foot') %>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      autoplay:true,
+      speed:1000,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination:{
+      	el:'.swiper-pagination',
+      	clickable:true
+      }
+    });
+</script>
+ </body>
+</html>

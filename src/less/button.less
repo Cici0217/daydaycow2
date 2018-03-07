@@ -1,0 +1,59 @@
+@import './unite.less';
+.app-btn {
+    width: 2.06rem;
+    height: 0.98rem;
+    background: @white;
+    border: solid 1px @B_black-b;
+    border-radius: 0.2rem;
+    color: @B_black-b;
+    font-size: @B_fs;
+    -webkit-appearance: none;
+}
+.app-btn-default{
+    border: none;
+    background: @A_blue;
+    color: @white;
+}
+.app-btn-gray{
+    border: none;
+    background: @C_gray-b;
+    color: @white;
+}
+.app-btn-white{
+    border: solid 1px @white;
+    background: transparent;
+    color: @white;
+    .borderRadus(0.15rem);
+    &:active{
+        background: tint(rgba(255,255,255,0.5), 0.9);
+    }
+}
+.app-btn-text{
+    border: none;
+    background: transparent;
+    color: @B_black-c;
+}
+.app-btn-text-b{
+    width: 3rem;
+    border: solid 1px @A_blue;
+    background: @white;
+    color: @A_blue;
+}
+.app-btn-orange{
+    width: 2.2rem;
+    border: none;
+    background: @A_orange;
+    color: @white;
+}
+.app-btn-blue{
+    width: 2.2rem;
+    border: none;
+    background: @A_blue;
+    color: @white;
+}
+.app-btn-purple{
+    width: 2.2rem;
+    border: none;
+    background: @A_purple;
+    color: @white;
+}

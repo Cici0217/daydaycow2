@@ -1,0 +1,6 @@
+ul.petList li{
+	list-style:none;
+	float:left;
+	width: 50%;
+	height: 7rem;
+}

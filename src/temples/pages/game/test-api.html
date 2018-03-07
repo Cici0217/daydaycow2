@@ -1,0 +1,48 @@
+<%- include('../../document_temp/document-head') %>
+<div class="app-conten-wrap setting-bottom pdLeft pdTop">
+    <div>
+        <span class="font1">日日赢钱包APP URL:</span>  <span> http://www.feixunapp.com</span>
+    </div>
+    <div>
+        <span class="font1">钱包账户地址:</span> <span> <input type="text" class="input-normal" name="url" value=""  id="blockChainAddress"/> </span>
+    </div>
+    <div>
+        <span class="font1">斐讯币:</span> <span id="randomNumber">0.3256</span>
+    </div>
+    <div class="center">
+        <input type="button" value="绑定" class="app-btn app-btn-default" id="bind"/>
+    </div>
+</div>
+<%- include('../../document_temp/document-foot') %>
+
+<style>
+.pdTop{
+    padding-top: 0.6rem;
+}
+.pdLeft{
+    padding-left: 0.34rem;
+}
+.center{
+    text-align: center;
+}
+span{
+    color: #333;
+    font-size: 0.34rem;
+    margin-top: 0.3rem;
+}
+span.font1{
+    color: #000;
+    font-size: 0.46rem;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.input-normal{
+    border: 1px solid #888;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.05rem;
+    padding-left: 0.1rem;
+}
+</style>
+ </body>
+</html>

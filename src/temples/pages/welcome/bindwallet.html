@@ -1,0 +1,52 @@
+<%- include('../../document_temp/document-head') %>
+<div>
+	<div>
+		<p>
+			绑定钱包
+		</p>
+		<div class="app-conten-wrap setting-bottom">
+			图片
+		</div>
+		<div id="first_step">
+			<input type="text" name="wallet_address" value="2222222222222222" id="wallet_address"  placeholder="在此输入钱包地址" /> <br>
+			绑定的钱包地址用于充值和体现
+	 		<br>
+			<input type="button" name="next_step" id="next_step" value="下一步" />
+		</div>
+		<div id="sencond_step"	class="hide">
+			<div>
+				请使用待绑定账户:<br>
+				<span id="bind_account"></span>
+			</div>
+
+			<div>
+			向绑定验证账户:<br>
+			<span id="blockChainAddress"></span>
+			</div>
+
+			<div>
+				转账金额:<br>
+		 		<span id="transferAmount"></span>
+			</div>
+			<input type="button" name="chang_bind_account_btn" id="chang_bind_account_btn" value="修改绑定账户" />
+			<input type="button" name="bind_blockchainaddress_to_cloud_btn" id="bind_blockchain_to_cloud_btn" value="已转账" />
+		</div>
+		<div id="third_step" class="hide">
+			<div>
+				确认转账中
+			</div>
+			<div>
+				由于区块链特性，确认转账大概最长需要5分钟:<br>
+				请耐心等待
+			</div>
+			<input type="button" name="begin_game_btn" value="绑定成功开始游戏" id="begin_game_btn" />
+		</div>
+ 
+	</div>
+
+</div>
+
+<%- include('../../page_temp/app-foot-nav') %>
+<%- include('../../document_temp/document-foot') %>
+ </body>
+</html>
